@@ -40,7 +40,7 @@ const task:Task = {
   id: uuidv1(),
   title,
   description,
-  status:TaskStatus.OPEN,
+      status: TaskStatus.OPEN,
 };
 
 this.tasks.push(task);
@@ -48,9 +48,9 @@ return task;
 }
 
 
-updateTask(id: string , status:TaskStatus):Task{
+  updateTask(id: string, status: TaskStatus): Task {
     const task = this.getTaskById(id);
-    if (!task){
+    if (!task) {
       task.status = status;
     }
 
